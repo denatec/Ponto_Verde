@@ -1,0 +1,28 @@
+:root {
+  --verde-escuro: #012D2E;
+  --verde-vivo: #02DC0B;
+  --branco: #FFFFFF;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center;
+  background: var(--branco); color: var(--verde-escuro);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.assistente {
+  width: min(92vw, 520px); display: flex; flex-direction: column;
+  align-items: center; gap: 18px; padding: 20px;
+}
+#avatar {
+  display: block; width: 100%; max-width: 460px; max-height: 72vh;
+  object-fit: contain;
+}
+.botoes { display: flex; justify-content: center; gap: 12px; }
+button {
+  min-width: 112px; padding: 12px 22px; border: 0; border-radius: 9px;
+  font-size: 1rem; font-weight: 700; cursor: pointer;
+}
+#falar { background: var(--verde-vivo); color: var(--verde-escuro); }
+#parar { background: var(--verde-escuro); color: var(--branco); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.estado { min-height: 1.3em; margin: 0; text-align: center; font-size: .95rem; }
